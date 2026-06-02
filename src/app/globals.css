@@ -1,0 +1,127 @@
+:root {
+  --bg-color: #060d0a; /* Dark Forest Obsidian */
+  --text-color: #f3f8f6; /* Crisp Soft White */
+  --text-muted: #cbd5e1; /* Bright Mint Slate - highly readable contrast */
+  --primary-accent: #34d399; /* Mint Emerald Accent */
+  --secondary-accent: #0d9488; /* Deep Sage Teal Accent */
+  
+  --glass-bg: rgba(12, 24, 19, 0.78); /* Dark sage glassmorphism */
+  --glass-border: rgba(255, 255, 255, 0.08); /* Sage micro border */
+  --glass-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Soft dark shadow */
+  
+  --font-main: var(--font-inter), sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-accent);
+}
+
+/* Glassmorphism utilities */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: var(--glass-shadow);
+  padding: 2rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-accent);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--primary-accent), var(--secondary-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 1rem;
+}
+
+.button-primary {
+  background: linear-gradient(90deg, var(--primary-accent), var(--secondary-accent));
+  color: white;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+}
+
+.button-primary:hover {
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.25);
+  transform: translateY(-2px);
+  color: white;
+}
+
+.button-secondary {
+  background: transparent;
+  border: 1px solid var(--primary-accent);
+  color: var(--primary-accent);
+}
+
+.button-secondary:hover {
+  background: rgba(52, 211, 153, 0.08); /* Translucent Mint Hover */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
