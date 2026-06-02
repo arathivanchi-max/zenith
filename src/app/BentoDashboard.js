@@ -19,7 +19,7 @@ export default function BentoDashboard({ displayRepos, richRepoDetails }) {
       <header className={styles.header}>
         <div className={styles.headerTopBarMobile}>
           <div className={styles.logo}>
-            <span className="gradient-text">Portfolio Builder</span>
+            <span className="gradient-text">Zenith</span>
           </div>
           
           <div className={styles.headerActions}>

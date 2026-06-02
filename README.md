@@ -1,6 +1,6 @@
-# Next.js Bento Portfolio Builder
+# Zenith Portfolio Builder
 
-A beautiful, high-performance, and fully responsive "Bento Grid" style portfolio template built with Next.js and React. It features an integrated tab dashboard, dark mode aesthetic, smooth CSS animations, and a centralized configuration file.
+A beautiful, high-performance, and fully responsive portfolio template built with Next.js and React. It features an integrated tab dashboard, dark mode aesthetic, smooth CSS animations, and a centralized configuration file.
 
 ## Features
 - 🎨 **Bento Grid Dashboard**: Beautifully structured glassmorphic cards with smooth hover animations and glowing shadows.
